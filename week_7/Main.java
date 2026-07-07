@@ -1,39 +1,17 @@
 public class Main {
-
     public static void main(String[] args) {
-
-        Appliance wm = new WashingMachine("LG");
-
-        wm.displayBrand();
-        wm.turnOn();
-        wm.operate();
-        wm.turnOff();
+        Appliance a1 = new WashingMachine("LG");
+        a1.displayBrand();
+        a1.turnOn();
+        a1.operate();
+        a1.turnOff();
 
         System.out.println();
 
-        Appliance fridge = new Refrigerator("Panasonic");
-
-        fridge.displayBrand();
-        fridge.turnOn();
-        fridge.operate();
-        fridge.turnOff();
-
-        System.out.println();
-
-        Appliance tv = new Television("Samsung");
-
-        tv.displayBrand();
-        tv.turnOn();
-        tv.operate();
-        tv.turnOff();
-
-        System.out.println();
-
-        Appliance ac = new AirConditioner("Daikin");
-
-        ac.displayBrand();
-        ac.turnOn();
-        ac.operate();
-        ac.turnOff();
+        Appliance a2 = new Refrigerator("Panasonic");
+        a2.displayBrand();
+        a2.turnOn();
+        a2.operate();
+        a2.turnOff();
     }
 }
