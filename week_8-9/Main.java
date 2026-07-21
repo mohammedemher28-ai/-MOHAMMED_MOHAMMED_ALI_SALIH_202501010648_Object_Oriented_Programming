@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.*;
 
 public class Main {
 
@@ -20,6 +21,19 @@ public class Main {
 
         for (int i = 0; i < tasks.size(); i++) {
             System.out.println((i + 1) + ". " + tasks.get(i));
+        }
+
+        try {
+            FileWriter writer = new FileWriter("task.txt");
+
+            for (String task : tasks) {
+                writer.write(task + "\n");
+            }
+
+            writer.close();
+            System.out.println("Tasks saved successfully.");
+        } catch (IOException e) {
+            System.out.println("Error saving file.");
         }
 
     }
