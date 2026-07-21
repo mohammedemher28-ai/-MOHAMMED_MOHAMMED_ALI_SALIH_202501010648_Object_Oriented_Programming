@@ -35,6 +35,22 @@ public class Main {
         } catch (IOException e) {
             System.out.println("Error saving file.");
         }
+try {
+    BufferedReader reader = new BufferedReader(new FileReader("task.txt"));
 
+    String line;
+
+    System.out.println("\n====== TASKS LOADED FROM FILE ======");
+
+    while ((line = reader.readLine()) != null) {
+        System.out.println(line);
+    }
+
+    reader.close();
+} catch (IOException e) {
+    System.out.println("Error reading file.");
+}
+    
+        
     }
 }
